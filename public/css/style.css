@@ -1,0 +1,14 @@
+body {
+  margin-top: 1vh;
+  background: #f9f9f9;
+  font-family: 'Helvetica';
+  text-align: center;
+}
+h4 {
+  text-align: left;
+  margin-left: 35vw;
+}
+.expanded {
+  text-align: left;
+  margin-left: 40vw;
+}
