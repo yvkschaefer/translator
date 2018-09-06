@@ -1,12 +1,30 @@
 {>"layout" /}
 {<body}
+  <button id="addModal">Add</button>
+  <br/>
   {#spanish}
     <h4>{word} <button click="collapse" href="#spanish_{id}">See translation</button></h4>
     <div id="spanish_{id}" class="expanded">
-      <p>
-        <strong>Value: </strong>{value} <br/>
-        <strong>Examples: </strong>{examples}
-      </p>
+      <p><strong>Value: </strong>{value} </p>
+      <p><strong>Examples: </strong>{examples}</p>
+      <button>Edit</button>
+      <button>Delete</button>
     </div>
   {/spanish}
+  <div id="myModal" class="modal">
+    <div class="modalContent">
+      <span class="close">&times;</span>
+      <form method="post" action="/add">
+        <p>Add Item</p>
+        <hr>
+        <strong><label>Word</label></strong><br>
+        <textarea type="text" name="word"></textarea><br>
+        <strong><label>Translation</label></strong><br>
+        <textarea type="text" name="value"></textarea><br>
+        <strong><label>Example</label></strong><br>
+        <textarea type="text" name="examples"></textarea><br>
+        <input type="submit" value="Save" />
+      </form>
+    </div>
+  </div>
 {/body}
